@@ -1,0 +1,1 @@
+# MyAnimeList API Rust Wrapper
