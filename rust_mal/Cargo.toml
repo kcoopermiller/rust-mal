@@ -1,0 +1,15 @@
+[package]
+name = "rust-mal"
+version = "0.1.0"
+authors = ["Cooper <kcoopermiller9@gmail.com>"]
+license-file = "LICENSE"
+repository = "https://github.com/kcoopermiller/rust-mal"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = { version = "0.11.6", features = ["blocking", "json"] }
+dotenv = "0.15.0"
+tokio = { version = "1.14.0", features = ["full"] }
+serde = { version = "1.0.130", features = ["derive"] }
