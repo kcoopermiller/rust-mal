@@ -2,8 +2,6 @@ use dotenv::dotenv;
 use rust_mal::mal;
 use std::env;
 
-// TODO: create lib.rs, create client struct, study unfamiliar terminology
-
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     dotenv().ok();
@@ -11,7 +9,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let client = mal::Client::new(token);
 
-    client.get_light_novels().await?;
+    for n in 3479..5000 { // Not run
+        client.get_light_novels(n).await?;
+    }
 
     Ok(())
 }
