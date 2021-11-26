@@ -9,8 +9,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let client = mal::Client::new(token);
 
-    for n in 3479..5000 { // Not run
+    for n in 142120..142500 { // 11/25/21
         client.get_light_novels(n).await?;
+        print!(" {}\n", n);
     }
 
     Ok(())
